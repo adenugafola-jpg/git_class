@@ -55,7 +55,7 @@ cat > /var/www/html/index.html << 'EOF'
                 'X-aws-ec2-metadata-token-ttl-seconds': '21600'
             }
         })
-        .then(response => response.text())
+        .then(response => response.text(copy))
         .then(data => {
             document.getElementById('instance-id').textContent = data;
         });
